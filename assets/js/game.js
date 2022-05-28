@@ -52,7 +52,7 @@ let questions = [
 
 //Constants
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 5;
 
 startGame = () => {
     questionCounter = 0;
@@ -101,5 +101,6 @@ choices.forEach( choice => {
         }, 1000);
     });
 });
+
 
 startGame();
