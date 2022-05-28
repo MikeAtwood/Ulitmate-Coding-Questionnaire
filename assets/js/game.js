@@ -50,6 +50,24 @@ let questions = [
     }
 ];
 
+// Quiz Timer
+/*
+var sec = 75;
+var time = setInterval(myTimer, 1000);
+
+var count = 15;
+var interval = setInterval(function(){
+  document.getElementById('count').innerHTML=count;
+  count--;
+  if (count === 0){
+    clearInterval(interval);
+    document.getElementById('count').innerHTML='Done';
+    // or...
+    alert("You're out of time!");
+  }
+}, 1000);
+*/
+
 //Constants
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
@@ -65,7 +83,7 @@ getNewQuestion = () =>  {
 
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("/end.html");
+        return window.location.assign("end.html");
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
